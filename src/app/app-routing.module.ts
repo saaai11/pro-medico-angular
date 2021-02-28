@@ -14,6 +14,16 @@ const routes: Routes = [
   },
 
   {
+    path: 'dashboard',
+    loadChildren: () => import('src/app/modules/dashboard/dashboard.module').then((m => m.DashboardModule))
+  },
+
+  {
+    path: 'hospitals',
+    loadChildren: () => import('src/app/modules/hospitals/hospitals.module').then((m => m.HospitalsModule))
+  },
+
+  {
     path: '',
     pathMatch: 'full',
     redirectTo: 'users'
